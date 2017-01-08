@@ -10,3 +10,5 @@
 	Commit is when you make changes and save it to your repo. A good commit message is when you explain your changes specifically.
 * What is a merge conflict?
 	Merge conflict happens when the file you're editing is deleted by someone else who had the same file repo. Or it happens when there's competing line changes.
+
+	Just making some changes for teacher.
