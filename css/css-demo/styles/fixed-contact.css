@@ -7,6 +7,7 @@ section#contact-info {
   background-color: white;
   border-bottom: 1px solid black;
   padding: 20px;
+  font-size: .8em;
 }
 
 h1#resume-title {
@@ -27,3 +28,13 @@ border. */
 section#contact-info p:last-of-type {
   border-right: none;
 }
+
+
+
+
+
+
+
+
+
+
