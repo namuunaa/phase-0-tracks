@@ -48,3 +48,20 @@ a {
   clear: both;
   background: #A2A2A2;
 }
+
+#side-a select {
+  display: none;
+}
+
+@media (max-width: 400px) {
+  #side-a ul {display: none;
+
+  }
+  #side-a select {display: inline-block; }
+}
+
+@media (max-width: 350px) {
+  div p {font-size: .5em;
+
+  }
+}
