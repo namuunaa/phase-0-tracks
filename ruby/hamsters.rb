@@ -12,3 +12,14 @@ age = gets.chomp
 if "#{age}" == ""
 	age = nil
 end 
+
+#volume = "#{volume_level}".to_i
+#age = "#{age}".to_i
+
+puts "The hamster's name is  #{name}"
+puts "The volume level is #{volume_level}"
+puts "The fur color is #{fur_color}"
+puts "The hamster is in good condition: #{condition}"
+puts "Estimated age is #{age}"
+
+
