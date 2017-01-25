@@ -1,0 +1,54 @@
+body{
+  max-width: 960px; 
+}
+
+header {
+  font-family: tahoma;
+  background-color: orange; 
+  padding: 10px; 
+}
+
+h1 {
+    display: block;
+    font-size: 2em;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+    text-align: center; 
+}
+
+p {
+    display: block;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
+.column-1 {
+  display: inline-block;
+  max-width: 45%; 
+  vertical-align: top;
+}
+
+.column-2 {
+  display: inline-block; 
+  max-width: 45%;  
+  vertical-align: top; 
+  padding-left: 15px; 
+  margin
+}
+
+footer{
+  text-align: center; 
+  margin: 10px; 
+  padding: 10px; 
+}
+
+@media (max-width: 400px){
+  column-1, column-2 {display: none;}
+   
+}
+
