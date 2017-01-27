@@ -66,7 +66,8 @@ puts "What is the password you want to use?"
 password=gets.chomp
   
 if type == "decrypt"
-  puts decrypt(password)
+	puts "Your decrypted password is:"
+  	puts decrypt(password)
 else
   puts encrypt(password)
 end
