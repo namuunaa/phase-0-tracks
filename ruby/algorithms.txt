@@ -1,0 +1,33 @@
+Robot guide: How to use an elevator. 
+
+-Determine the current level and the desired level. 
+	If the desired level is above the current level, press the top button(up arrow) to go up.
+	Else press the bottom button (down arrow) to go down.
+-Wait until the elevator door opens. When the elevator door opens look at the sign above the elevator door.
+	If the sign has an up arrow and you're going up, get in the elevator.
+	Else if the sign has a down arrow and you're going down, get in the elevator.
+	Else if the sign has a down arrow and you're going up, don't get in the elevator.
+	Else if the sign has an up arrow and you're going down, don't get in the elevator. 
+-Inside the elevator find the floor panel.
+-Locate the desired level button on the panel until you find it and press the button.
+-Until you reach the desired level, stay in the elevator.
+-When the desired level is reached (button with the desired floor button will light up), get out of the elevator.
+
+
+Making coffee in the morning.
+
+-Make sure and check if the coffee pot looks clean and see if there's used filter when you open the lid.
+	If the pot is not clean or/and there's unused filter inside, clean the pot and trash the unused filter.
+	Else if everything is clean, go ahead and pour one cup of water to the water filler.
+-Place a new filter in the brewer basket.
+-Measure one spoon of coffee from the coffee container using the coffee spoon and place it in the basket with the filter.
+-Close the lid.
+-On the control panel press the start button.
+	If the red light on the control panel turns on => your coffee is brewing
+	Else check whether the coffee maker is plugged in and press the start button again.
+-Wait for the alarm to sound, and your coffee is ready to enjoy. 
+
+
+
+
+
