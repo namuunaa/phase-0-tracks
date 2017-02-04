@@ -11,7 +11,22 @@ real_name = 'Felicia Torres'
 
 swap_name = real_name.split(' ').reverse.join(' ')
 
+def next_vowel(swap_name)
+	vowels = "aeiou"
+	index = 0
+	while index < swap_name.length 
+		if swap_name.[index] == "u"
+			swap_name[index] == "a"
+		else 
+			swap_name[index] = vowels[index].next!
+		end
+	index+=1
+	end
+	swap_name
+end
 
+
+=begin
 def next_consonant(swap_name)
 	consonants = "bcdfghjklmnpqrstvwxyz"
 	index = 0
@@ -28,28 +43,9 @@ def next_consonant(swap_name)
 	end
 	puts swap_name
 end
-=begin
-def next_vowel()
-	vowels = "aeiou"
-	index = 0
-	while index < swap_name.length 
-		n = 0
-		until swap_name[index] == vowels[n]
-			n+=1
-		end
-		if swap_name[index] == "u"
-			swap_name[index] == "a"
-		else 
-		swap_name[index] = vowels[index].next!
-		end
-	index+=1
-	end
-end
+
 
 =end
-
-
-
 
 
 
