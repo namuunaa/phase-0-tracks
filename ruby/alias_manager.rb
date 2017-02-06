@@ -14,9 +14,10 @@
 -Print all the data user entered
 =end
 
-
-real_name = "Felicia Torres"
-swap_name = real_name.split(" ").reverse.join(" ")
+#Checking Felicia Torres 
+#real_name = "Felicia Torres"
+#swap_name = real_name.split(" ").reverse.join(" ")
+#swap_name = swap_name.downcase
 
 #Change vowels in name to next vowels
 def next_vowel(name)
@@ -30,10 +31,8 @@ def next_vowel(name)
 			letter
 		end
 	end
-	name_change1.join  # new array back to string
+	name_change1.join  # new array convert back to string
 end
-
-#p next_vowel("Felicia")
 
 #Change the consonants to next consonant
 def next_consonant(name)
@@ -48,12 +47,26 @@ def next_consonant(name)
 			letter
 		end
 	end
-	name_change2.join
+	name_change2.join	# new array convert back to string
 end
 
+#for debugging purpose
+#p next_consonant(next_vowel(swap_name)).upcase  
 
-p next_vowel("Felicia")
-p next_consonant("Felicia")
+# Ask the user to provide an input until they say quit.
+loop do 
+	puts "Please enter your name you want to convert:"
+	puts "(When you're done type 'quit')"
+	real_name = gets.chomp.downcase
+	if real_name == "quit"
+		puts "You're now exiting the name converter."
+		break 		#stopping the loop and exiting the program
+	else
+		swap_name = real_name.split(" ").reverse.join(" ")
+		fake_name = next_consonant(next_vowel(swap_name)).upcase
+		p "#{real_name} is also known as #{fake_name}."
+	end
+end
 
 
 
