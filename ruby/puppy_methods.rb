@@ -32,14 +32,11 @@ p.high_five("Lola")
 
 #new class design
 class Blog
-
   def initialize
     puts "Initializing new blog instance..."
   end
-  def greeting
-    puts "Welcome to my blog. What's your name?"
-    visitor = gets.chomp
-    puts "Hi #{visitor}!"
+  def greeting(name)
+    puts "Hi #{name}, welcome to today's blog post!"
   end
   def post(quote)
     puts "Daily quote:"
@@ -49,11 +46,16 @@ end
 
 #Blog.new.greeting
 #Blog.new.post("Just do it!")
+blog_list = []
 
 50.times do
-  b = Blog.new 
+  blog_list << Blog.new
 end
 
+blog_list.each do |blog|
+  blog.greeting("Lola")
+  blog.post("Just do it!")
+end
 
 
 
