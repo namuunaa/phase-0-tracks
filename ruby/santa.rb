@@ -1,4 +1,7 @@
 class Santa
+  attr_reader :age, :ethnicity
+  attr_accessor :gender, :reindeer_ranking
+  
   def initialize(gender, ethnicity)
     puts "Initializing Santa instance ..."
     @gender = gender
@@ -17,24 +20,24 @@ class Santa
   end
 
   def celebrate_birthday
-    @age +=1
+    @age = 1
   end
-
+  
   def get_mad_at(reindeer_name)
     @reindeer_ranking.insert(-1, @reindeer_ranking.delete_at(@reindeer_ranking.index(reindeer_name)))
   end
+  #   #setter method
+  # def gender=(new_gender)
+  #   @gender = new_gender
+  # end
+  #   #getter methods
+  # def age
+  #   @age
+  # end
 
-  def gender=(new_gender)
-    @gender = new_gender
-  end
-
-  def age
-    @age
-  end
-
-  def ethnicity
-    @ethnicity
-  end
+  # def ethnicity
+  #   @ethnicity
+  # end
 
 end
 
@@ -46,8 +49,7 @@ santa.celebrate_birthday
 puts "Santa turned #{santa.celebrate_birthday}"
 santa.get_mad_at("Dancer")
 puts santa.gender = "gender-fluid"
-
-
+#add diverse initializations
 santas = []
 genders = ["female", "male", "gender-fluid", "n/a"]
 ethnicities = ["white", "black", "multiracial", "hispanic"]
