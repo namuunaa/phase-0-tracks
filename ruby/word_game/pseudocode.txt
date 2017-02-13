@@ -1,0 +1,30 @@
+Game design pseudocode
+
+-Create a class for word guessing game
+  -Create a method that asks the user-1 to guess a word based on the length.
+    -Until the user correctly guesses the word, ask them to guess the word.
+    -Set a tracker for each time the user guesses, and warn the user how many guesses they have left
+    -If the user repeats a guess, do not count in tracker
+    -If the user reaches the limit, they lose.
+    -Else If the user guesses a letter correct, change the current state of the word each time.
+    -If the user guesses the word correct, show a congratulatory message
+    -If the user didn't guess the word, show a taunting message.
+-Create a new instance of word guessing game class
+  -Ask user-2 to input a word to guess, and save the answer
+  -Give user-1 a clue of how many letters the word consists, and ask them to guess the word.
+  -If the user guesses the word correct, show a congratulatory message
+  -If the user didn't guess the word, show a taunting message.
+
+  -------------------------------------------
+
+  class: WordGame
+  method: guess, tracker, 
+  attributes: 
+
+  1. get a word from user1, save the word to be guessed.
+  2. guess the word
+  3. track the progress
+  4. show results.
+
+
+
