@@ -1,9 +1,11 @@
+#Program not running properly
+
 class WordGame
   attr_accessor :hidden_word, :word_to_guess, :guess_count, :letters_guessed
 
   def initialize(word)
     @word = word
-    @word_to_guess = @word.split("")
+    @word_to_guess = @word.split("")  
     @hidden_word = []
     @letters_guessed = []
     @guess_count = 0
@@ -13,11 +15,13 @@ class WordGame
     @hidden_word = @word_to_guess.fill("_")
   end
 
+  # check_letters method not properly swapping the "_" with correct matching letter
+  # needs fixing
   def check_letters(letter)
     if @word_to_guess.include? letter 
       @hidden_word = hidden_word.delete_at(word_to_guess.index(letter))
       @hidden_word = hidden_word.insert(word_to_guess.index(letter), letter)
-     
+      @hidden_word
     else
      p @hidden_word
     end
@@ -29,13 +33,14 @@ class WordGame
       puts "Yay, you guessed a letter right."
     elsif @letters_guessed.include?(letter)
       #@guess_count -=1
+      #if the letter is repeating, still counting. need to find a way to not count.
       puts "We tried that letter already. Keep guessing."
     else
       puts "Try again."
     end  
   end
 
-  def letters_guessed(letter)
+  def letters_guessed(letter)   #creating an array of letters to keep track of repetitiveness
     @letters_guessed << letter
   end
   def over
@@ -68,3 +73,4 @@ end
  end
 
  game.over
+

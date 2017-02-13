@@ -7,3 +7,5 @@ describe WordGame  do
     expect(game.word_to_guess).to eq ["b", "e", "r", "k", "e", "l", "e", "y"]
   end 
 end
+
+#needs more tests
