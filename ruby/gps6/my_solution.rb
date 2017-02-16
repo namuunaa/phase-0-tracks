@@ -48,19 +48,14 @@ class VirusPredictor
   # end
 
   def predicted_deaths#(population_density, population, state)
-  pct = case
-  when @population_density >= 200 
-  0.4
-  when @population_density >= 150 
-  0.3
-  when @population_density >= 100 
-  0.2
-  when @population_density >= 50 
-  0.1
-  else
-  0.05
-  end
-  print "#{@state} will lose #{ (@population * pct).floor } people in this outbreak"
+    result = case @population_density
+      when 0..49 then 0.05
+      when 50..99 then 0.1
+      when 100..149 then 0.2
+      when 150..199 then 0.3
+      else 0.4
+    end
+    print "#{@state} will lose #{ (@population * result).floor } people in this outbreak"
   end
 
 =begin
@@ -87,19 +82,14 @@ class VirusPredictor
 =end
 def speed_of_spread
   speed = 0.0
-speed_hi = case
-  when @population_density >= 200 
-  0.5
-  when @population_density >= 150 
-  1
-  when @population_density >= 100 
-  1.5
-  when @population_density >= 50 
-  2
-  else
-  2.5
+  virus_speed = case @population_density
+    when 0..49 then 2.5
+    when 50..99 then 2
+    when 100..149 then 1.5
+    when 150..199 then 1
+    else 0.05
   end
-  puts " and will spread across the state in #{speed += speed_hi} months.\n\n"
+  puts " and will spread across the state in #{virus_speed} months.\n\n"
   end
 end
 
