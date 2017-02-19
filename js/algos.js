@@ -20,7 +20,7 @@ var findLongestWord = function (array) {
       longestWord; 
     }
   }
-  return longestWord;
+  return("The longest word is: " + longestWord);
 }
 
 console.log(findLongestWord(["long phrase","longest phrase","longer phrase"]));
@@ -75,7 +75,13 @@ var randomTestData = function (length) {
   return array;
 }   
 
-console.log(randomTestData(6));
+//Driver Code
+
+for (var i = 0; i < 10; i++) {
+  var arrays = randomTestData(4);
+  console.log(arrays);
+  console.log(findLongestWord(arrays));
+}
 
 
 
