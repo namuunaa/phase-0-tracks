@@ -60,8 +60,22 @@ console.log(shareKeyValue({name: "Lola", gender: "female"},{name: "Mark", gender
 //    - Do a loop that will create a new word and push to array until the given length
 // Result: returns an array of strings with that length
 
+var randomTestData = function (length) {
+  var array = [];
+  for (var i = 0 ; i < length; i++) {
+    var alphabets = "abcdefghijklmnopqrstuvwxyz";
+    var word = "";
+    var wordLength = Math.floor(Math.random() * 10) + 1; 
+    for (var count = 0; count < wordLength; count++) {
+       word += alphabets.charAt(Math.floor(Math.random() * alphabets.length));
+       word;
+    }
+    array.push(word);
+  }
+  return array;
+}   
 
-
+console.log(randomTestData(6));
 
 
 
