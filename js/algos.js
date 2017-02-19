@@ -49,6 +49,18 @@ var shareKeyValue = function (object1, object2) {
 console.log(shareKeyValue({name: "Steven", age: 54},{name: "Tamir", age: 54}));
 console.log(shareKeyValue({name: "Lola", gender: "female"},{name: "Mark", gender: "male"}))
 
+// Generate random test data
+// PSEUDOCODE:
+// Define a function that takes an integer as parameter for length
+//    - Create an empty array 
+//    - Create a variable of all the letters
+//    - Create a string from all the alphabets with a condition:
+//         - String length should be min 1 letter and max 10 letter. 
+//    - Push the string into the array after each word is made
+//    - Do a loop that will create a new word and push to array until the given length
+// Result: returns an array of strings with that length
+
+
 
 
 
