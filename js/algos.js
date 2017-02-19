@@ -25,3 +25,34 @@ function findLongestWord(array) {
 
 console.log(findLongestWord(["long phrase","longest phrase","longer phrase"]));
 console.log(findLongestWord(["hello my darling", "hello", "hi, dear", "hi"]));
+
+
+// find a key-value match in 2 objects
+// PSEUDOCODE:
+// Create a function that takes 2 objects
+//  - Declare 2 empty objects in new variable s
+//  - Add a conditional statement that checks whether 2 objects share a key - value pair:
+//     - Use bracket notation to access a key's value.
+//     - Use "==" to compare
+//     - Return true, if there's a match
+//     - Else, if there is no match, return false
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
