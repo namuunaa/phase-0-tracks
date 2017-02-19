@@ -1,7 +1,8 @@
 #Program not running properly
 
 class WordGame
-  attr_accessor :hidden_word, :word_to_guess, :guess_count, :letters_guessed
+  attr_accessor :hidden_word, :guess_count, :letters_guessed
+  attr_reader :word_to_guess
 
   def initialize(word)
     @word = word
@@ -19,13 +20,28 @@ class WordGame
   # needs fixing
   def check_letters(letter)
     if @word_to_guess.include? letter 
-      @hidden_word = hidden_word.delete_at(word_to_guess.index(letter))
-      @hidden_word = hidden_word.insert(word_to_guess.index(letter), letter)
-      @hidden_word
-    else
+     @hidden_word[@word_to_guess.index(letter)] = letter
      p @hidden_word
+     p "Yay, you guessed a letter right." 
+
+
+
+       # @hidden_word.delete_at(@word_to_guess.index(letter))
+       # @hidden_word.insert(@word_to_guess.index(letter), letter)
+    else
+       @hidden_word
     end
+  
   end
+
+=begin
+def check_letters(letter)
+  index = 0
+  @hidden_word.map! do |letter|
+    if @word_to_guess.include? letter
+      @hidden_word.delete_at()[]
+end
+=end
 
   def progress(letter)
     @guess_count +=1
@@ -43,6 +59,7 @@ class WordGame
   def letters_guessed(letter)   #creating an array of letters to keep track of repetitiveness
     @letters_guessed << letter
   end
+
   def over
     if @hidden_word.join == @word
       puts "Congratulations! You guessed the word!"
@@ -59,7 +76,7 @@ end
  puts "Welcome to word guessing game! 2 players needed to play this game."
  puts "Player 1, please enter a word you would like player 2 to guess."
  word = gets.chomp.downcase
-
+ print @word_to_guess
  game = WordGame.new(word)
  p game.hide_word
 
