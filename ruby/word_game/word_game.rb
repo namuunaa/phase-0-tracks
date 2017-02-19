@@ -19,19 +19,13 @@ class WordGame
   # check_letters method not properly swapping the "_" with correct matching letter
   # needs fixing
   def check_letters(letter)
-    if @word_to_guess.include? letter 
-     @hidden_word[@word_to_guess.index(letter)] = letter
-     p @hidden_word
-     p "Yay, you guessed a letter right." 
-
-
-
-       # @hidden_word.delete_at(@word_to_guess.index(letter))
-       # @hidden_word.insert(@word_to_guess.index(letter), letter)
+    @word_to_guess.each do |letter, index|
+      if @word_to_guess.include?(letter)
+      @hidden_word[@word_to_guess.index(letter)] = letter
     else
-       @hidden_word
+      @hidden_word 
     end
-  
+  end
   end
 
 =begin
