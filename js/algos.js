@@ -23,10 +23,6 @@ var findLongestWord = function (array) {
   return("The longest word is: " + longestWord);
 }
 
-console.log(findLongestWord(["long phrase","longest phrase","longer phrase"]));
-console.log(findLongestWord(["hello my darling", "hello", "hi, dear", "hi"]));
-
-
 // find a key-value match in 2 objects
 // PSEUDOCODE:
 // Create a function that takes 2 objects
@@ -45,9 +41,6 @@ var shareKeyValue = function (object1, object2) {
   }
   return false;
 }
-
-console.log(shareKeyValue({name: "Steven", age: 54},{name: "Tamir", age: 54}));
-console.log(shareKeyValue({name: "Lola", gender: "female"},{name: "Mark", gender: "male"}))
 
 // Generate random test data
 // PSEUDOCODE:
@@ -76,7 +69,15 @@ var randomTestData = function (length) {
 }   
 
 //Driver Code
+//Release 0
+console.log(findLongestWord(["long phrase","longest phrase","longer phrase"]));
+console.log(findLongestWord(["hello my darling", "hello", "hi, dear", "hi"]));
 
+//Release 1
+console.log(shareKeyValue({name: "Steven", age: 54},{name: "Tamir", age: 54}));
+console.log(shareKeyValue({name: "Lola", gender: "female"},{name: "Mark", gender: "male"}))
+
+// Release 2
 for (var i = 0; i < 10; i++) {
   var arrays = randomTestData(4);
   console.log(arrays);
