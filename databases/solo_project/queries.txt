@@ -1,0 +1,66 @@
+1.Display the information in one table (either table is fine).
+
+SELECT * FROM tv_shows;
+
+1|Suits|6|20110623|1
+2|Game of Thrones|6|20110417|3
+3|Black Mirror|3|20111204|2
+4|Stranger Things|1|20160715|2
+
+2.Update an item that meets some condition (you can choose a condition that makes sense).
+
+UPDATE tv_shows SET seasons=2 WHERE name="Stranger Things";
+SELECT * FROM tv_shows
+
+1|Suits|6|20110623|1
+2|Game of Thrones|6|20110417|3
+3|Black Mirror|3|20111204|2
+4|Stranger Things|2|20160715|2
+
+3.Display the information in both tables using one query.
+
+SELECT * FROM network, tv_shows WHERE tv_shows.network_id = network.id;
+
+1|USA Network|1|Suits|6|20110623|1
+3|HBO|2|Game of Thrones|6|20110417|3
+2|Netflix|3|Black Mirror|3|20111204|2
+2|Netflix|4|Stranger Things|2|20160715|2
+
+4.Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
+
+SELECT network.name, tv_shows.name FROM tv_shows JOIN network ON tv_shows.network_id = network.id;
+
+USA Network|Suits
+HBO|Game of Thrones
+Netflix|Black Mirror
+Netflix|Stranger Things
+
+5.Delete an item that meets some condition (you can choose a condition that makes sense).
+
+DELETE FROM tv_shows WHERE name="Suits";
+SELECT * from tv_shows;
+
+2|Game of Thrones|6|20110417|3
+3|Black Mirror|3|20111204|2
+4|Stranger Things|2|20160715|2
+
+RELEASE 3
+
+SELECT * FROM tv_shows CROSS JOIN network;
+
+2|Game of Thrones|6|20110417|3|1|USA Network
+2|Game of Thrones|6|20110417|3|2|Netflix
+2|Game of Thrones|6|20110417|3|3|HBO
+3|Black Mirror|3|20111204|2|1|USA Network
+3|Black Mirror|3|20111204|2|2|Netflix
+3|Black Mirror|3|20111204|2|3|HBO
+4|Stranger Things|2|20160715|2|1|USA Network
+4|Stranger Things|2|20160715|2|2|Netflix
+4|Stranger Things|2|20160715|2|3|HBO
+
+SELECT tv_shows.id, tv_shows.name, release_date, network.name FROM tv_shows INNER JOIN network ON tv_shows.network_id = network.id;
+
+2|Game of Thrones|20110417|HBO
+3|Black Mirror|20111204|Netflix
+4|Stranger Things|20160715|Netflix
+
