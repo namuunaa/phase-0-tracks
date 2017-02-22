@@ -44,3 +44,23 @@ SELECT * from tv_shows;
 3|Black Mirror|3|20111204|2
 4|Stranger Things|2|20160715|2
 
+RELEASE 3
+
+SELECT * FROM tv_shows CROSS JOIN network;
+
+2|Game of Thrones|6|20110417|3|1|USA Network
+2|Game of Thrones|6|20110417|3|2|Netflix
+2|Game of Thrones|6|20110417|3|3|HBO
+3|Black Mirror|3|20111204|2|1|USA Network
+3|Black Mirror|3|20111204|2|2|Netflix
+3|Black Mirror|3|20111204|2|3|HBO
+4|Stranger Things|2|20160715|2|1|USA Network
+4|Stranger Things|2|20160715|2|2|Netflix
+4|Stranger Things|2|20160715|2|3|HBO
+
+SELECT tv_shows.id, tv_shows.name, release_date, network.name FROM tv_shows INNER JOIN network ON tv_shows.network_id = network.id;
+
+2|Game of Thrones|20110417|HBO
+3|Black Mirror|20111204|Netflix
+4|Stranger Things|20160715|Netflix
+
