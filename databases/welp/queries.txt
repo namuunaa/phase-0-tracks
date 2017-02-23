@@ -1,0 +1,16 @@
+
+
+1. JOIN 3 TABLES  
+
+SELECT * FROM users, businesses, reviews WHERE reviews.business_id = businesses.id AND reviews.user_id = users.id;  
+
+2. REMOVE REPETITIVE COLUMNS   
+
+SELECT first_name, last_name, stars, comment, name FROM users, businesses, reviews WHERE reviews.business_id = businesses.id AND reviews.user_id = users.id;  
+
+3. REVIEW ALL 3 TABLES FOR 1 BUSINESS
+
+  SELECT first_name, last_name, stars, comment, name FROM users, businesses, reviews WHERE reviews.business_id = businesses.id AND reviews.user_id = users.id AND businesses.id=1;  
+
+
+*Accessed business by business ID, but can also access by name. 
