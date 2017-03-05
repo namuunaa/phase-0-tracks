@@ -26,8 +26,8 @@ end
 
 # add static resources
 
-get 'students/seattle' do
-  @students = db.execute("SELECT * FROM students")
+get '/seattle' do
+  @seattle = db.execute("SELECT * FROM students WHERE campus='SEA' ")
   erb :seattle
 end
   
