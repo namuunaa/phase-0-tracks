@@ -66,5 +66,13 @@ get '/great_job' do
   end
 end
 
+# route params
+# add 2 numbers, give result
+
+get '/:num_1/add/:num_2' do
+  num_1 = params[:num_1].to_i
+  num_2 = params[:num_2].to_i
+  "#{num_1} + #{num_2} = #{num_1 + num_2}"
+end
 
 
