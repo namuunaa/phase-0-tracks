@@ -49,10 +49,22 @@ end
 # displays an address
 
 get '/contact' do
-  "Contact us @ #{params[:address]}"
+  "Contact us @ 633 Folsom avenue, San Francisco CA 94107"
 end
 
 # /great_job route 
 # take person's name as parameter 
 # and say "Good job, person name!"
 # if not parameter, just Good job!
+
+get '/great_job' do
+  person_name = params[:person_name]
+  if person_name
+    "Good job, #{params[:person_name]}!"
+  else
+    "Good job!"
+  end
+end
+
+
+
