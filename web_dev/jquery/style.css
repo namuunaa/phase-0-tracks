@@ -1,4 +1,15 @@
 img {
   height: 400px;
-  width: 50%;
+  width: 48%;
+  float: left;
+  margin: 2px;
+}
+
+h1 {
+  font-family: Helvetica;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
 }
